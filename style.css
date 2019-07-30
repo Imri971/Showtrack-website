@@ -3,6 +3,9 @@
     box-sizing: border-box;
 }
 
+h4{
+    font-size: 15px;
+}
 
 body
 {
@@ -10,11 +13,7 @@ body
     padding:0;
     font-family: 'lato', 'helvetica neue', helvetica, arial;
 }
-.container
-{
-    width: 90%;
-    margin: 0 auto;
-}
+
 header{
    
     margin-bottom: 30px;
@@ -23,7 +22,6 @@ header{
 
 main{
     display: block;   
-
 }
 
 
@@ -54,7 +52,7 @@ main{
     position: relative;
     height: 25em;
     margin-bottom: 2em;
-   
+    background: rgba(0,0,0,0.7);
 }
 
 .banner img
@@ -73,8 +71,7 @@ main{
     color: white;
     top: 50%;
     left:50%;
-    margin-left:-12em;
-    margin-top: -102px;
+    transform: translate(-50%,-50%);
     position: absolute;
     font-weight: normal;
 }
@@ -94,24 +91,25 @@ main{
 .bloc_under_banner
 {
     border: 1px solid black;
-padding: 1.6em;
-font-size: 0.9em;
-max-width: 27em;
-position: relative;
-max-height: 14em;
-margin-right: 1em;
+    padding: 1rem 1rem;
+    font-size: 0.9em;
+
+    position: relative;
+
+    margin: 1rem 0 1rem 3px;
 }
 
 .bloc_under_banner h4
 {
     text-align: center;
     background-color: white;
-    padding: 5px 0;
-    width: 50%;
+    padding: 5px 10px;
+    width: auto;
     position: absolute;
-    top: -33px;
-    left: 45%;
-    margin-left: -75px;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%);
+    
 }
 
 
@@ -119,13 +117,15 @@ margin-right: 1em;
 {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    
 }
 
 .section
 {
     position: relative;
-    margin-left:-10px;
+    
 }
 .b1
 {
@@ -133,8 +133,8 @@ margin-right: 1em;
 }
 .articles
 {
-    width: 51em;
-margin: 0 2.1em 2em 10px;
+    width: 100%;
+    margin: 0 2.1em 2em 10px;
     border: 1px solid black;
     padding: 2em 4% 3em;
     height: auto;
@@ -158,9 +158,9 @@ margin: 1.2em auto 0.7em;
     padding: 0 1em 0;
     width: auto;
     position: absolute;
-    top: 15.9em;
-    left: 19.1em;
-    margin-left: -4em;
+    top: 16.9em;
+    left: 50%;
+        transform: translate(-50%);
 }
 
 .articles p 
@@ -209,18 +209,21 @@ margin: 1.2em auto 0.7em;
 }
 .articles_open h4
 {
-    top: 16.5em;
-left: 19em;
+    top: 19em;
+    left: 50%;
+    font-size: 15px;
 }
 /*************************************************************/
 
 .button
 {
+    display: block;
+    width: 95px;
     position: relative;
     left: 50%;
+    transform: translate(-50%);
     top: 0.6em;
     background: none;
-        background-color: rgba(0, 0, 0, 0);
     background-color: black;
     color: white;
     padding: 1em;
@@ -230,7 +233,6 @@ left: 19em;
     font-size: 0.9em;
     bottom: 20px;
     cursor: pointer;
-    margin-left: -2em;
     text-decoration: none;
 }
 
@@ -239,6 +241,11 @@ left: 19em;
     padding: 1em 3% 3em;
     text-align: center;
     font-weight: 400;
+    position: relative;
+}
+
+.comment_email, .comment_name{
+    display: block;
 }
 
 .comment h3
@@ -253,7 +260,7 @@ left: 19em;
     color: #000;
     font-weight: 400;
     font-size: 16px;
-    margin-bottom: -1em;
+    
 }
 
 .comment h6
@@ -280,7 +287,7 @@ left: 19em;
 }
 .comment_name input , .comment_email input
 {
-    width: 26.5em;
+    width: 100%;
     border: none;
     border: 1px solid rgba(198, 197, 197, 0.5);
     padding: 8px 14px;
@@ -289,12 +296,14 @@ left: 19em;
 
 .send {
     position: relative;
-    left: 0;
-    top: 0.6em;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 3rem;
     background: none;
     background-color: black;
     color: white;
-    padding: 1em;
+    padding: 1em 1em;
+    width: auto;
     margin-top: 2.1em;
     font-weight: bold;
     border: none;
@@ -321,10 +330,14 @@ form input[type="text"]:default , input[type="email"]:default
 
 .next 
 {
+    display: inline-block;
     position: relative;
     left: 50%;
-    margin-left:-20% ;
-    bottom:0;
+    transform: translate(-50%);
+    margin-bottom: 1rem;
+}
+.next ul{
+    display: flex;
 }
 .next ul li
 {
@@ -341,8 +354,6 @@ form input[type="text"]:default , input[type="email"]:default
     margin: 0 2px;
     font-weight: 600;
     border: none;
-    font-size: 14px;
-    bottom:20px;
     cursor: pointer;
     text-decoration: none;
 }
@@ -361,13 +372,10 @@ form input[type="text"]:default , input[type="email"]:default
     border:1px solid black;
 }
 
-
-
-aside
-{
-    width: 22.125em;
+/******************** ASIDE***********************/
+.aside h4{
+    
 }
-
 .presentation
 {
     border: 1px solid black;
@@ -383,9 +391,11 @@ aside
 
 .sign
 {
+    position: relative;
     width: 170px;
     height: auto;
-    margin: 0 5em;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 
@@ -429,9 +439,9 @@ aside
     padding: 0 1em 0;
     width: auto;
     position: absolute;
-    top: -1.9em;
-    left: 11.5em;
-    margin-left: -3em;
+    top: -0.7em;
+    left: 50%;
+    transform: translate(-50%);
     
 }
 .recent a
@@ -469,9 +479,9 @@ aside
     padding: 0 1em 0;
     width: auto;
     position: absolute;
-    top: -1.9em;
-    left: 8.5em;
-    margin-left: -4em;
+    top: -0.7em;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .search input
@@ -483,28 +493,18 @@ footer{
     background-color: #000;
     width: 100%;
     margin-top: 2em;
-    padding-left: 83px;
-    padding-right: 6em;
-    display: block;
 }
 
 .top_footer
 {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
     color: white;
 }
 .top_footer .bloc 
 {
    
     margin: 0 0 1em 0;
-   
     display: inline-block;
-float: left;
-width: 385px;
-max-width: 40%;
-padding: 14px 0;
+    padding: 14px 0;
 
 }
 
@@ -516,6 +516,7 @@ font-weight: 500;
 font-family: 'lato';
 letter-spacing: 2px;
 padding:0;
+margin-bottom: 2em;
 }
 
 .h5_bar
@@ -540,3 +541,65 @@ padding:0;
     padding: 0.7em 0 1.2em;
 }
 
+@media  (max-width: 991px){
+    .under_banner
+    {
+        flex-wrap: wrap !important;
+    }
+    .bloc_under_banner:nth-child(2) h4{
+        font-size: 14px;
+        width: 139px;
+        top: -13px;
+    }
+    
+    .bottom_main
+    {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    }
+    .articles {
+
+    width: 102%;
+    margin: 0 2.1em 2em 0px;
+}
+
+    .articles h4{
+        left: 50%;
+        transform: translate(-50%);
+        width: 52%;
+    }
+
+    .next{
+        transform: translate(-55%);
+    }
+
+    aside{
+        margin-left: 8px;
+    }
+    
+    .top_footer
+    {
+    margin: 0 auto;
+    }
+
+@media (max-width: 400px){
+    .logo{
+        width: 100%;
+    }
+    .articles h4{
+        font-size: 13px;
+        top: 23.5em;
+        width: 93%;
+    }
+
+    .top_footer{
+        text-align: center !important;
+    }
+    .h5_bar{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+}
